@@ -3,12 +3,22 @@ entries:
   webapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-05-02T17:47:06.311906468+03:00"
+    created: "2025-05-02T17:52:26.707774177+03:00"
     description: A Helm chart for Kubernetes
-    digest: b9f58e99944d0d630b47bbc0c047b32154ea8e9e10d8fb57ed72d194d9e269e3
+    digest: 858ab76f3f7c9038bfb0cd9aabd45f86f76f5104da3c1d5ec75fda36daca52e0
+    name: webapp
+    type: application
+    urls:
+    - https://rdcib.github.io/gitops/webapp-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-05-02T17:52:26.707398802+03:00"
+    description: A Helm chart for Kubernetes
+    digest: f9dd66c400f29e1a689c43b7a01352b7d450503715e00bfeaf7916d1547c59f9
     name: webapp
     type: application
     urls:
     - https://rdcib.github.io/gitops/webapp-0.1.1.tgz
     version: 0.1.1
-generated: "2025-05-02T17:47:06.311259996+03:00"
+generated: "2025-05-02T17:52:26.706538868+03:00"
