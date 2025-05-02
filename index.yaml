@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  webapp:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-05-02T16:33:05.302847523+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 713974c47ac44ee546c19bb60ba15107b44fc8c22f540ff66088aa3718b3d757
+    name: webapp
+    type: application
+    urls:
+    - https://github.com/RDCIB/gitops.git/webapp-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-05-02T16:33:05.302486764+03:00"
