@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: {{ .Values.metadata.name }}-svc
   namespace: {{ .Values.metadata.name}}-ns
+spec:
   selector:
     {{- range $key, $value := .Values.labels }}
     {{ $key }}: {{ $value | quote }}
