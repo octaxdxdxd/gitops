@@ -9,6 +9,6 @@ entries:
     name: webapp
     type: application
     urls:
-    - https://github.com/RDCIB/gitops.git/webapp-0.1.1.tgz
+    - https://rdcib.github.io/gitops/webapp-0.1.1.tgz
     version: 0.1.1
 generated: "2025-05-02T17:26:46.548368977+03:00"
