@@ -1,26 +1,31 @@
 apiVersion: v1
 kind: Deployment
 metadata:
-  name: webapp
+  name: {{ .Values.metadata.name }}
+  namespace: {{ .Values.metadata.name }}-ns
 spec:
   selector:
     matchLabels:
-      app: webapp
+{{- range $key, $value := .Values.labels }}
+      {{ $key }}: {{ $value | quote }}
+{{- end }}
   template:
     metadata:
-      name: webaapp
+      name: {{ .Values.metadata.name }}
       labels:
-        app: webapp
+{{- range $key, $value := .Values.labels }}
+        {{ $key }}: {{ $value | quote }}
+{{- end }}
     spec:
       containers:
-        - name: webapp
-          image: kodekloud/webapp-color
+        - name: {{ .Values.container.name }}
+          image: "{{ .Values.container.image }}:{{ .Values.container.tag }}"
           ports:
             - containerPort: 80
           resources:
             requests:
-                memory: "128Mi"
-                cpu: "250m"
+              memory: {{ .Values.container.resources.requests.memory }}
+              cpu: {{ .Values.container.resources.requests.cpu }}
             limits:
-                memory: "256Mi"
-                cpu: "500m"
+              memory: {{ .Values.container.resources.limits.memory }}
+              cpu: {{ .Values.container.resources.limits.cpu }}
