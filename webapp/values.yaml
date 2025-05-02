@@ -1,6 +1,6 @@
 metadata:
   name: webapp
-lapels:
+labels:
   app: webapp
 container:
   name: webapp
