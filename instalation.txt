@@ -1,0 +1,5 @@
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yamlkubectl 
+kubectl port-forward service/argocd-server 8081:80 -n argocd
+kubectl describe secret argocd-initial-admin-secret -n argocd
+kubectl get secret argocd-initial-admin-secret --template={{.data.password}} -n argocd | base64 -d
