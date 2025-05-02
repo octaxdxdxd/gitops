@@ -5,7 +5,7 @@ labels:
 container:
   name: webapp
   image: kodekloud/webapp-color
-  tag: v1
+  #tag: v1
   resources:
     requests:
       cpu: "250m"
